@@ -6,7 +6,7 @@ import re
 pytesseract.tesseract_cmd = "/opt/homebrew/bin/tesseract"
 
 # Path to the latest screenshot
-image_path = "/Users/dominik/Library/Mobile Documents/com~apple~CloudDocs/0_artner/0_FH Stp/00_Masterarbeit/Tesserax/T6_Screenshots/TID_001_Test_02.png"
+image_path = "/Users/dominik/Library/Mobile Documents/com~apple~CloudDocs/0_artner/0_FH Stp/00_Masterarbeit/Tesserax/T6_Screenshots/screenshot.png"
 print(f"Image path: {image_path}")  # Debugging print
 
 image = Image.open(image_path)
