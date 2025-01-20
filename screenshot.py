@@ -4,7 +4,7 @@ import subprocess
 def take_screenshot():
     # Define the exact file path for the screenshot
     screenshot_path = "/Users/dominik/Library/Mobile Documents/com~apple~CloudDocs/0_artner/0_FH Stp/00_Masterarbeit/Tesserax/T6_Screenshots/screenshot.png"
-    print(f"Attempting to save screenshot to: {screenshot_path}")
+    print(f"Attempting to save screenshot to")
 
     # Verify if the directory exists
     directory = os.path.dirname(screenshot_path)

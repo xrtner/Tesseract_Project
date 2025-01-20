@@ -11,8 +11,17 @@ client = SimpleUDPClient(ip, port)
 # Directory containing stems
 stem_directory = "/Users/dominik/Library/Mobile Documents/com~apple~CloudDocs/0_artner/0_FH Stp/00_Masterarbeit/Tesserax/T5_Stems"
 
-# TID to match (set dynamically or manually)
-current_tid = "001"  # Example TID
+# Path to the TID file
+tid_file_path = "/Users/dominik/Library/Mobile Documents/com~apple~CloudDocs/0_artner/0_FH Stp/00_Masterarbeit/Tesserax/T6_Screenshots/extracted_tid.txt"
+
+# Read the TID dynamically from the file
+if os.path.exists(tid_file_path):
+    with open(tid_file_path, "r") as f:
+        current_tid = f.read().strip()
+        print(f"Dynamically loaded TID: {current_tid}")
+else:
+    print(f"TID file not found at: {tid_file_path}. Exiting process.")
+    exit(1)
 
 # Define track mappings
 track_mapping = {
@@ -61,6 +70,10 @@ for stem_file in filtered_stems:
             client.send_message(f"/track/{track_number}/clip/{clip_number}/start", clip_start_position)
             print(f"Loaded {stem_file} into Deck {track_number}, Clip {clip_number}.")
             loaded_decks.add(stem_id)  # Mark this deck as loaded
+
+            client.send_message(f"/track/{track_number}/clip/{clip_number}/mode", "raw")
+
+
         else:
             print(f"Skipping {stem_file}: No matching track or already loaded for stem ID {stem_id}.")
     except Exception as e:
