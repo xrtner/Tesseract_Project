@@ -29,6 +29,7 @@ track_mapping = {
     "02": 2,  # Deck 02
     "03": 3,  # Deck 03
     "04": 4,  # Deck 04
+    "05": 5,
 }
 
 # Scan directory for stem files

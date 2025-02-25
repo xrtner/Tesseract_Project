@@ -19,10 +19,12 @@ def button_pressed(unused_addr, signal):
 
 # Set up the dispatcher to handle incoming OSC messages
 dispatcher = Dispatcher()
-dispatcher.map("/ch14n28", button_pressed)  # Map the button signal address
+dispatcher.map("/ch14n40", button_pressed)
+dispatcher.map("/ch10ctrl1", button_pressed)  # Map the button signal address
 
-print("Starting OSC server on 127.0.0.1:9100...")
-server = BlockingOSCUDPServer(("127.0.0.1", 9100), dispatcher)
+print("Starting OSC server on 127.0.0.1:9200...")
+# server = BlockingOSCUDPServer(("192.168.0.228", 9100), dispatcher)
+server = BlockingOSCUDPServer(("127.0.0.1", 9200), dispatcher)
 print("OSC server is running and waiting for messages...")
 
 # Start the OSC server
