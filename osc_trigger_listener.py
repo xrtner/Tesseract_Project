@@ -1,9 +1,14 @@
 from pythonosc.dispatcher import Dispatcher
 from pythonosc.osc_server import BlockingOSCUDPServer
 import subprocess
+import sys
+
+# Redirect stderr to log file
+sys.stderr = open('error.log', 'a')
 
 # Function to handle button press events
-def button_pressed(unused_addr, signal):
+def button_pressed(unused_addr, *args):
+    signal = args[0] if args else 0.0
     if signal == 1.0:  # Button pressed
         print("Button pressed! Triggering screenshot.py...")
         try:

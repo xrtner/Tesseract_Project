@@ -1,0 +1,33 @@
+Traceback (most recent call last):
+  File "/Users/dominik/Library/Mobile Documents/com~apple~CloudDocs/0_artner/0_FH Stp/00_Masterarbeit/Tesserax/T3_Code/Tesseract_Project-1/osc_trigger_listener.py", line 32, in <module>
+    server = BlockingOSCUDPServer(("0.0.0.0", 9200), dispatcher)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dominik/Library/Mobile Documents/com~apple~CloudDocs/0_artner/0_FH Stp/00_Masterarbeit/Tesserax/T3_Code/Tesseract_Project/venv/lib/python3.11/site-packages/pythonosc/osc_server.py", line 75, in __init__
+    super().__init__(server_address, _UDPHandler, bind_and_activate)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socketserver.py", line 456, in __init__
+    self.server_bind()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socketserver.py", line 472, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 48] Address already in use
+Traceback (most recent call last):
+  File "/Users/dominik/Library/Mobile Documents/com~apple~CloudDocs/0_artner/0_FH Stp/00_Masterarbeit/Tesserax/T3_Code/Tesseract_Project-1/osc_trigger_listener.py", line 32, in <module>
+    server = BlockingOSCUDPServer(("0.0.0.0", 9200), dispatcher)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dominik/Library/Mobile Documents/com~apple~CloudDocs/0_artner/0_FH Stp/00_Masterarbeit/Tesserax/T3_Code/Tesseract_Project/venv/lib/python3.11/site-packages/pythonosc/osc_server.py", line 75, in __init__
+    super().__init__(server_address, _UDPHandler, bind_and_activate)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socketserver.py", line 456, in __init__
+    self.server_bind()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socketserver.py", line 472, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 48] Address already in use
+Traceback (most recent call last):
+  File "/Users/dominik/Library/Mobile Documents/com~apple~CloudDocs/0_artner/0_FH Stp/00_Masterarbeit/Tesserax/T3_Code/Tesseract_Project-1/osc_trigger_listener.py", line 32, in <module>
+    server = BlockingOSCUDPServer(("0.0.0.0", 9200), dispatcher)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/dominik/Library/Mobile Documents/com~apple~CloudDocs/0_artner/0_FH Stp/00_Masterarbeit/Tesserax/T3_Code/Tesseract_Project/venv/lib/python3.11/site-packages/pythonosc/osc_server.py", line 75, in __init__
+    super().__init__(server_address, _UDPHandler, bind_and_activate)
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socketserver.py", line 456, in __init__
+    self.server_bind()
+  File "/Library/Frameworks/Python.framework/Versions/3.11/lib/python3.11/socketserver.py", line 472, in server_bind
+    self.socket.bind(self.server_address)
+OSError: [Errno 48] Address already in use
