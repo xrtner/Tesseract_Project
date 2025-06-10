@@ -7,6 +7,7 @@ import json
 import time
 import sys
 import logging
+import subprocess
 
 # Configure logging
 logging.basicConfig(
@@ -91,6 +92,14 @@ try:
     if track_id:
         write_tid_with_lock(track_id)
         print(f"Successfully processed TID: {track_id}")
+        
+        # Always run deck_loader.py, but log if it's the same TID
+        if new_tid == old_tid:
+            print(f"Same TID detected ({new_tid}), reloading stems...")
+        else:
+            print(f"New TID detected: {new_tid}, loading stems...")
+
+        subprocess.run(["python3", "deck_loader.py"])
         sys.exit(0)
     else:
         logging.error("Failed to detect TID after all retries")

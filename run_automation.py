@@ -24,11 +24,11 @@ subprocess.run(["python3", "test_tesseract.py"])
 # Get the new TID
 new_tid = get_current_tid()
 
-# Always load stems, but log if TID is the same
+# Log whether it's the same or new TID
 if new_tid == old_tid:
     print(f"Same TID detected ({new_tid}), reloading stems...")
 else:
     print(f"New TID detected: {new_tid}, loading stems...")
 
-# Always run deck_loader.py
+# Always run the process
 subprocess.run(["python3", "deck_loader.py"])

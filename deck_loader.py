@@ -30,10 +30,6 @@ def read_tid_with_lock():
         fcntl.flock(f.fileno(), fcntl.LOCK_SH)
         try:
             data = json.load(f)
-            # Check if the file is fresh (less than 5 seconds old)
-            if time.time() - data['timestamp'] > 5:
-                print("TID file is too old, may be stale")
-                return None, None
             return data['tid'], data['status']
         except (json.JSONDecodeError, KeyError) as e:
             print(f"Error reading TID file: {e}")
@@ -118,4 +114,4 @@ print(f"TID{current_tid}")
 # Get track title from first stem file (removing TID and stem number prefix and file extension)
 track_title = filtered_stems[0][10:-4]  # -4 to remove .wav or .mp3
 print(track_title)
-print()  # Add blank line at the end
+print()
